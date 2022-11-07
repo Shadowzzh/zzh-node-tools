@@ -1,19 +1,36 @@
 {
-  "name": "zzh-node-tools",
-  "version": "1.0.0",
-  "description": "我的node工具",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Shadowzzh/zzh-node-tools.git"
-  },
-  "author": "zhangziheng",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Shadowzzh/zzh-node-tools/issues"
-  },
-  "homepage": "https://github.com/Shadowzzh/zzh-node-tools#readme"
+    "name": "zzh-node-tools",
+    "version": "1.0.0",
+    "description": "我的node工具",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "rimraf ./build && tsc",
+        "dev": "nodemon",
+        "start": "npm run build && node build/index.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Shadowzzh/zzh-node-tools.git"
+    },
+    "author": "zhangziheng",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Shadowzzh/zzh-node-tools/issues"
+    },
+    "bin": {
+        "moveFiles": "./src/index.js"
+    },
+    "homepage": "https://github.com/Shadowzzh/zzh-node-tools#readme",
+    "devDependencies": {
+        "@types/node": "^18.11.3",
+        "@types/yargs": "^17.0.13",
+        "nodemon": "^2.0.20",
+        "rimraf": "^3.0.2",
+        "ts-node": "10.6.0",
+        "typescript": "^4.7.4"
+    },
+    "dependencies": {
+        "yargs": "^17.6.0"
+    }
 }
